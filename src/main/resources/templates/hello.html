@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+
+<head th:include="commom::title('百顺宁养老院')"></head>
+<!--<link rel="stylesheet" href="https://cdn.staticfile.org/layui/2.5.6/css/layui.css">-->
+
+<body  >
+<!-- 导航栏 -->
+<div class="layui-container" id="mainhead">
+    <div class="layui-row">
+        <div class="layui-col-md12">
+            <ul class="layui-nav layui-bg-green " >
+                <li class="layui-nav-item layui-this"><a href="#home" style="font-size: 20px;font-weight: bold">首页</a></li>
+                <li class="layui-nav-item"><a href="#introduction" style="font-size: 20px;font-weight: bold">百顺宁养老院</a></li>
+                <li class="layui-nav-item"><a href="#medicine" style="font-size: 20px;font-weight: bold">中医药</a></li>
+                <li class="layui-nav-item" ><a href="/login" style="font-size: 20px;font-weight: bold">登录·注册</a></li>
+            </ul>
+        </div>
+    </div>
+</div>
+
+<!-- 轮播图 -->
+<div class="layui-container" id="home">
+    <div class="layui-row">
+        <div class="layui-col-md12" >
+            <div class="layui-col-xs12 layui-col-md8" >
+                <div class="layui-carousel" id="carousel" style="width: 100%;">
+                    <div carousel-item >
+                        <div><img src="https://img1.baidu.com/it/u=3135536799,4083007527&fm=253&fmt=auto&app=120&f=JPEG?w=800&h=533" ></div>
+                        <div><img src="https://img0.baidu.com/it/u=3965541529,4135325288&fm=253&fmt=auto&app=120&f=JPEG?w=800&h=533"></div>
+                        <div><img src="https://img1.baidu.com/it/u=3096889177,3296251576&fm=253&fmt=auto&app=120&f=JPEG?w=800&h=533"></div>
+                    </div>
+                </div>
+            </div>
+            <div  class="layui-col-xs6 layui-col-md4">
+                <div id="mainRight">
+                    <h2 style="text-align: center;color: #2E8B57;font-weight: bold;font-size: 25px;">老年人养老知识</h2>
+                    <ul style="margin-left: 10px;margin-top: 12px;">
+                        <li class="zhishiitem"><a class="zhishi" href="https://mp.weixin.qq.com/s?__biz=MzA4NjgxMjcxNQ==&mid=2651871642&idx=1&sn=abe20883973410311ec398fc7e55671d&chksm=842608deb35181c8b69f36c2efa03419b8f3622286515b138fc1670725459a93e8fda615b549&scene=27">居家养老——健康科普小知识</a></li>
+                        <li class="zhishiitem"><a class="zhishi" href="https://baijiahao.baidu.com/s?id=1725992368713474142&wfr=spider&for=pc">全方面教您做健康老人</a></li>
+                        <li class="zhishiitem"><a class="zhishi" href="https://baijiahao.baidu.com/s?id=1789749619146407858&wfr=spider&for=pc">步入老年，养生不在于运动与喝水</a></li>
+                        <li class="zhishiitem"><a class="zhishi" href="https://www.tianchang.gov.cn/public/161054597/1110385203.html">老年人保健小常识</a></li>
+                        <li class="zhishiitem"><a class="zhishi" href="https://m.thepaper.cn/baijiahao_19223780">老年人健康管理的必要性</a></li>
+                    </ul>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</div>
+
+<div id="introduction" class="target" style="margin-top: 80px;margin-right: 100px;margin-left: 100px; padding: 10px; background: rgba(176,224,230 ,0.6);">
+    <h2 style="font-size: 40px;font-weight: bold;text-align: center;color: #2E8B57">百顺宁养老院</h2>
+    <h2 class="intro_title">简介：</h2>
+    <h2 class="intro_item">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        百顺宁养老院集优质医疗资源、知名中医诊所、丰富康乐空间、多重疗愈花园、认知照护专区于一体，
+        主楼为3栋地上20层（局部20层）、地下3层的建筑。园林设计充分利用场地和建筑特色，坐落于寸土寸金的西二环旁。
+        养老院拥有结合中国老人人体工程学特征，研发设计适老空间、布置适老设施设备，从公共服务空间到卧室和卫生间都竭力为居民打造无障碍、
+        适老、安全的居住环境。从整体规划到室内设计的空间尺寸、家具和材料选择，借鉴国际适老标准。
+    </h2>
+    <h2 class="intro_item">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        百顺宁养老院，一个专为老年人打造的生活乐园， 致力于让每一位入住的老人都能享受到家的温馨与舒适。
+        在这里，我们深知老年是生活的一个重要阶段，也是积累的智慧与经验的沉淀，
+        因此，我们竭尽所能为每一位老人提供高品质的服务，让他们的晚年生活更加精彩。
+        打造多重立体景观，是一个多元合一的享老逸境。让长者仿佛穿梭在中式园林的水墨画中。</h2>
+    <h2 class="intro_title">医养结合，全方位健康保障</h2>
+    <h2 class="intro_item">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;一个社区配建一家医院。集医疗、保健、颐养为一体的全科诊所，
+        为居民提供常见病诊疗服务。与国内多家知名三甲医院合作，实现双向转诊、绿色通道、远程医疗、专家会诊等服务。</h2>
+    <h2 class="intro_item" style="font-weight: bold;margin-top: 15px">特色中医</h2>
+    <h2 class="intro_item">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;百顺宁养老院引入知名中医诊所，
+        提供老年病理疗、健康指导、中医养生等基础中医服务，邀请国医名师开设特色“国医馆”，满足长者中医保健与调养需求。</h2>
+    <h2 class="intro_item" style="font-weight: bold;margin-top: 15px">医疗服务</h2>
+    <h2 class="intro_item">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;百顺宁养老院专注老年医疗，
+        依托自有医生护士团队和三甲多点专家打造五级医疗（医生）能力体系,
+        为长者提供涵盖“疾病预防、常见病诊疗、慢病管理、医疗护理、急病救治、重症绿通”的全场景医疗服务。</h2>
+    <h2 class="intro_item" style="font-weight: bold;margin-top: 15px">康复服务</h2>
+    <h2 class="intro_item">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;百顺宁养老院为长者提供以延缓机体老化、
+        改善慢病为目的多学科融合的“基础康复”服务，实现“身体可感、效果可见、数据可追踪”的康复效果， 真正提高长者生活质量。
+        同时依托面向康复客群的“专业康复中心”服务社区长者，实现按病程从急性期、恢复期到维持期的“医+康+护”紧密融合的服务模式</h2>
+    <h2 class="intro_title"style="font-weight: bold;margin-top: 15px">膳食服务</h2>
+    <h2 class="intro_item">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        百顺宁养老院自建专业营养师与资深老年餐厨师团队，科学设计营养量化食谱，针对长者不同健康状况，为长者提供科学适老的膳食服务。</h2>
+    <h2 class="intro_item" style="font-weight: bold;margin-top: 15px">配套医疗</h2>
+    <h2 class="intro_item">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;百顺宁养老院的配套医疗在老年病的防治、
+        中西医医疗保健、内科心血管疾病、内科消化系统疾病、 肿瘤的放射介入治疗等方面积累了丰富的经验。</h2>
+    <h2 class="intro_item">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;中国医学科学院阜外医院：
+        集医疗、科研、预防和人才培养于一体的三级专科医院。设有冠心病中心、 心律失常中心、急重症中心、心力衰竭中心、肺血管病中心。</h2>
+    <h2 class="intro_item">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        国家临床重点专科：老年病科、普通外科、重症医学科、消化内科、临床护理专业、病理科、检验科、地方病科。</h2>
+    <h2 class="intro_item">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;北京大学人民医院：医院临床、教学、科研三大学科集群比肩并行。
+        医院在造血干细胞移植、器官移植、关节置换、恶性肿瘤等多学科领域的诊断治疗处于国内乃至世界领先水平。</h2>
+    <h2 class="intro_item">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;北京解放军375医院：是一家集医疗、教学、科研、预防和保健于一体的三级甲等综合医院。</h2>
+    <div style="height:650px; margin-top: 40px">
+        <h2 class="intro_item" style="font-weight: bold;margin-top: 15px;text-align: center">环境·图片</h2>
+        <ul>
+            <li class="enverli"><img class="enverimg" src="https://img2.baidu.com/it/u=2654005850,4264815802&fm=253&fmt=auto&app=138&f=JPEG?w=889&h=500"></li>
+            <li class="enverli"><img class="enverimg" src="https://img0.baidu.com/it/u=2075609281,3066171210&fm=253&fmt=auto&app=120&f=PNG?w=588&h=389"></li>
+            <li class="enverli"><img class="enverimg" src="https://img0.baidu.com/it/u=3634731553,3077499346&fm=253&fmt=auto&app=138&f=JPEG?w=667&h=500"></li>
+
+            <li class="enverli"><img class="enverimg" src="https://img2.baidu.com/it/u=2851061168,3446217150&fm=253&fmt=auto&app=138&f=JPEG?w=600&h=400"></li>
+            <li class="enverli"><img class="enverimg" src="https://img1.baidu.com/it/u=113765761,3486802312&fm=253&fmt=auto&app=138&f=JPEG?w=691&h=461"></li>
+            <li class="enverli"><img class="enverimg" src="https://img1.baidu.com/it/u=2827948822,728263126&fm=253&fmt=auto&app=120&f=JPEG?w=607&h=437"></li>
+
+            <li class="enverli"><img class="enverimg" src="https://img0.baidu.com/it/u=838818737,3984223519&fm=253&fmt=auto&app=138&f=JPEG?w=786&h=500"></li>
+            <li class="enverli"><img class="enverimg" src="https://img2.baidu.com/it/u=1934221246,3789645488&fm=253&fmt=auto&app=138&f=JPEG?w=640&h=428"></li>
+            <li class="enverli"><img class="enverimg" src="https://img0.baidu.com/it/u=2217826724,1241949221&fm=253&fmt=auto&app=138&f=JPEG?w=500&h=333"></li>
+
+        </ul>
+    </div>
+</div>
+
+<div id="medicine" class="target">
+    <h2>Section 3</h2>
+    <p>This is the content of section 3.</p>
+    <h2>Section 2</h2>
+    <h2>Section 2</h2>
+    <h2>Section 2</h2>
+    <h2>Section 2</h2>
+    <h2>Section 2</h2>
+    <h2>Section 2</h2>
+    <h2>Section 2</h2>
+    <h2>Section 2</h2>
+    <h2>Section 2</h2>
+    <h2>Section 2</h2>
+    <h2>Section 2</h2>
+    <h2>Section 2</h2>
+</div>
+
+
+<script src="https://cdn.staticfile.org/layui/2.5.6/layui.js"></script>
+<script>
+    // layui初始化
+    layui.use(['carousel', 'element'], function(){
+        var carousel = layui.carousel;
+        var element = layui.element;
+
+        // 轮播图
+        carousel.render({
+            elem: '#carousel',
+            width: '100%',
+            height: '420px',
+            objectFit:'contain',
+            arrow: 'hover',
+            interval: 2000
+        });
+    });
+
+    //吸顶
+    // let Head = document.getElementById('mainhead')
+    // window.onscroll = ()=>{
+    //     // 获取滚动距离
+    //     let top = document.documentElement.scrollTop || document.body.scrollTop;
+    //     if (top != 0) {
+    //         Head.style = "position: fixed;top: 0;"
+    //     }else{
+    //         Head.style = "position: static;"
+    //     }
+    // }
+
+    // 获取导航栏中的所有链接
+    const links = document.querySelectorAll('.layui-nav layui-bg-green li a');
+
+    // 遍历每个链接并添加点击事件处理程序
+    links.forEach(link => {
+        link.addEventListener('click', function(event) {
+            // 阻止默认的链接跳转行为
+            event.preventDefault();
+
+            // 获取目标位置的元素
+            const targetId = this.getAttribute('href');
+            const targetElement = document.querySelector(targetId);
+
+            // 将目标元素滚动到可见区域
+            targetElement.scrollIntoView({ behavior: 'smooth' });
+        });
+    });
+</script>
+</body>
+<style>
+    html {
+        height: 100%;
+        width: 100%;
+    }
+    body {
+        background-image: url(https://img-qn.51miz.com/preview/element/00/01/22/88/E-1228841-52016ABE.jpg);
+        background-repeat: repeat;
+        background-size: 100% 100%;
+    }
+    #mainRight{
+        background: rgba(176,224,230 ,0.6);
+        height: 400px;
+        padding-top: 20px;
+    }
+    .zhishi{
+        color:#2E8B57;
+        text-align: center;
+        font-size: 21px;
+    }
+    .zhishiitem{
+        height: 50px;
+    }
+    .intro_title{
+        color: #2E8B57;
+        font-weight: bold;
+        font-size: 25px;
+        margin-top:40px;
+    }
+    .intro_item{
+        color: #2E8B57;
+        font-size: 22px
+    }
+    .enverli{
+        list-style: none;
+        float: left;
+        width: 33%;/*三列图片排列*/
+        height: 200px;/*当图片尺寸不一的时候，设置一个高度*/
+        overflow: hidden;/*超出隐藏*/
+        margin-bottom: 5px;
+    }
+    .enverimg{
+        position: relative;
+        width: 100%;
+        top: 50%;/*li高度的一半*/
+        transform: translateY(-50%); /*再向上移动自身的50%*/
+        margin: 5px;
+    }
+</style>
+</html>

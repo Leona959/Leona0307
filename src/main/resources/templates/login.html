@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <head th:include="commom::title('百顺宁登陆')"></head>
+    <link href="../static/css/login.css" rel="stylesheet">
+</head>
+<body>
+<div class="main-body">
+    <div class="login-main">
+        <div class="login-top">
+            <span>百顺宁养老院</span>
+            <span class="bg1"></span>
+            <span class="bg2"></span>
+        </div>
+        <form class="layui-form login-bottom" action="javascript:void(0);">
+            <div class="center">
+                <!--账号-->
+                <div class="item">
+                    <span class="icon icon-2"></span>
+                    <input type="text" name="username" lay-verify="required"  placeholder="请输入登录账号" value="root" autocomplete="off" maxlength="24"/>
+                </div>
+                <!--密码-->
+                <div class="item">
+                    <span class="icon icon-3"></span>
+                    <input type="password" name="password" lay-verify="required"  placeholder="请输入密码" value="666666" autocomplete="off" maxlength="20">
+                    <span class="bind-password icon icon-4"></span>
+                </div>
+                <div class="item">
+                    <select name="power" id="power" lay-verify="required">
+                        <option value="0">管理员</option>
+                        <option value="1" >护工</option>
+                        <option value="2" >用户</option>
+                    </select>
+                </div>
+                <!--验证码-->
+                <div id="validatePanel" class="item" style="width: 137px;">
+                    <input type="text" name="captcha" placeholder="请输入验证码" autocomplete="off" hover maxlength="4">
+                    <img th:src="@{/captcha/getCode(type=char)}" class="validateImg" id="captchaImage"/>
+                </div>
+
+            </div>
+            <div class="tip">
+                <a href="javascript:" class="forget-password">忘记密码？请联系管理员</a>
+            </div>
+            <div class="layui-form-item" style="text-align:center; width:100%;height:100%;margin:0px;">
+                <button class="login-btn" lay-submit lay-filter="login">立即登录</button>
+            </div>
+        </form>
+    </div>
+</div>
+
+<script th:src="@{/static/lib/layui-v2.5.5/layui.js}" charset="utf-8"></script>
+<script>
+
+
+
+    layui.use(['form','jquery','layer'], function () {
+        const $ = layui.jquery,
+            form = layui.form,
+            layer = layui.layer;
+
+        $('.bind-password').on('click', function () {
+            if ($(this).hasClass('icon-5')) {
+                $(this).removeClass('icon-5');
+                $("input[name='password']").attr('type', 'password');
+            } else {
+                $(this).addClass('icon-5');
+                $("input[name='password']").attr('type', 'text');
+            }
+        });
+
+        // 进行登录操作
+        form.on('submit(login)', function (data) {
+
+            $.ajax({
+                url:'/root/loginIn',
+                data:data.field,
+                type:"post",
+                dataType:'json',
+                success:function(result){
+                    if(result.code==0){
+                        layer.msg(result.msg,{icon:1,time:1000},function(){
+                            location.href = "/indexR";
+                        })
+                    }else if(result.code==1){
+                        layer.msg(result.msg,{icon:1,time:1000},function(){
+                            location.href = "/indexA";
+                        })
+                    }else if(result.code==2){
+                        layer.msg(result.msg,{icon:1,time:1000},function(){
+                            location.href = "/indexU";
+                        })
+                    }
+                    else{
+                        layer.msg(result.msg,{icon:2,time:1000},function(){
+                            /* 加入随机数，防止验证码缓存 --- 点击无法刷新 */
+                            document.getElementById("captchaImage").src="/captcha/getCode?type=char"+Math.random()*10;
+                        });
+                    }
+                }
+            });
+            return false;
+        });
+
+        $('.forget-password').click(function (){
+            layer.alert('<p>请联系管理员！</p><p> QQ:446783737 </p><p>微信：12345679</p><p>电话：18380565977</p>')
+        })
+
+        $("#captchaImage").click(function () {
+            document.getElementById("captchaImage").src="/captcha/getCode?type=char"+Math.random()*10;
+        });
+        setInterval(function(){
+            document.getElementById("captchaImage").src="/captcha/getCode?type=char"+Math.random()*10;
+        },30000);
+    });
+</script>
+</body>
+</html>

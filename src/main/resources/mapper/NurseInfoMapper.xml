@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+        PUBLIC
+        "-//mybatis.org//DTD Config 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.sm.graduation.nurse.dao.NurseInfoMapper">
+
+
+    <select id="listAll" resultType="NurseInfo">
+        select * from nurse_info
+        <where>
+            <if test="user!=''">nurse_name like concat("%",#{user},"%") </if>
+        </where>
+    </select>
+
+
+
+</mapper>
